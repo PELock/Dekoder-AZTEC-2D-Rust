@@ -12,6 +12,7 @@ documentation = "https://docs.rs/aztec-decoder"
 readme = "README.md"
 keywords = ["aztec2d", "aztec-decoder", "aztec", "vehicle", "registration"]
 categories = ["api-bindings", "encoding"]
+exclude = [".git", ".gitignore"]
 
 [dependencies]
 reqwest = { version = "0.12", features = ["multipart", "json"] }
