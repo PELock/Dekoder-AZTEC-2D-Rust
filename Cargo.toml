@@ -1,0 +1,35 @@
+[package]
+name = "aztec-decoder"
+version = "2.0.0"
+edition = "2021"
+rust-version = "1.63"
+authors = ["Bartosz Wójcik <support@pelock.com>"]
+description = "Biblioteka programistyczna pozwalająca na dekodowanie danych z dowodów rejestracyjnych pojazdów samochodowych zapisanych w formie kodu AZTEC 2D."
+license = "Apache-2.0"
+repository = "https://github.com/PELock/Dekoder-AZTEC-2D-Rust"
+homepage = "https://www.pelock.com/pl/produkty/dekoder-aztec"
+documentation = "https://docs.rs/aztec-decoder"
+readme = "README.md"
+keywords = ["aztec2d", "aztec-decoder", "aztec", "vehicle", "registration"]
+categories = ["api-bindings", "encoding"]
+
+[dependencies]
+reqwest = { version = "0.12", features = ["multipart", "json"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["fs"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+
+[[example]]
+name = "dekoduj_dane_dowodu_ze_zdjecia_dowodu"
+path = "przyklady/dekoduj_dane_dowodu_ze_zdjecia_dowodu.rs"
+
+[[example]]
+name = "dekoduj_dane_dowodu_z_kodu_aztec_2d_dowodu"
+path = "przyklady/dekoduj_dane_dowodu_z_kodu_aztec_2d_dowodu.rs"
+
+[[example]]
+name = "dekoduj_dane_ze_zeskanowanego_kodu"
+path = "przyklady/dekoduj_dane_ze_zeskanowanego_kodu.rs"
